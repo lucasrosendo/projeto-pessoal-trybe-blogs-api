@@ -81,7 +81,7 @@ Para fazer um post é necessário usuário e login, portanto será trabalhada a 
 
   - Serão `3` dias de projeto.
 
-  - Data de entrega para avaliação final do projeto: `20/04/2022 14:00`.
+  - Data de entrega para avaliação final do projeto: `25/04/2022 14:00`.
 
 ---
 

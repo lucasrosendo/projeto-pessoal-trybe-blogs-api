@@ -1,19 +1,17 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 
-const usersModel = require('./models/users');
+const userController = require('./controllers/userController');
+const categoryController = require('./controllers/categoryController');
+const blogPostController = require('./controllers/blogPostController');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.post('/users', async (req, res) => {
-  const { displayName, email, password, image } = req.body;
-
-  const create = await usersModel.create(displayName, email, password, image);
-
-  return res.status(201).send(create);
-});
+app.use('/user', userController.user);
+app.use('/login', userController.login);
+app.use('/categories', categoryController);
+app.use('/post', blogPostController);
 
 app.listen(3000, () => console.log('ouvindo porta 3000!'));
 
